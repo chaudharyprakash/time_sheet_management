@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_06_052740) do
+ActiveRecord::Schema.define(version: 2020_01_06_062354) do
 
   create_table "employees", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_052740) do
     t.boolean "send_status_email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "employee_id"
   end
 
   add_foreign_key "log_dates", "employees"
