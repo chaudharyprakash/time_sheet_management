@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  repo_name: MyString
+  pm_emails: MyString
+  send_status_email: false
+
+two:
+  name: MyString
+  repo_name: MyString
+  pm_emails: MyString
+  send_status_email: false

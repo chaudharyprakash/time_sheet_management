@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  log_date: one
+  details: MyString
+  time_taken: MyString
+  commit: MyString
+  link: MyString
+  commit_hash: MyString
+  project_id: 1
+
+two:
+  log_date: two
+  details: MyString
+  time_taken: MyString
+  commit: MyString
+  link: MyString
+  commit_hash: MyString
+  project_id: 1
