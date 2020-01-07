@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_06_062354) do
+ActiveRecord::Schema.define(version: 2020_01_07_134214) do
 
   create_table "employees", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2020_01_06_062354) do
     t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "bitbucket_username"
+    t.string "github_username"
     t.index ["email"], name: "index_employees_on_email", unique: true
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
   end
@@ -48,6 +50,8 @@ ActiveRecord::Schema.define(version: 2020_01_06_062354) do
     t.integer "project_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "branch_name"
+    t.integer "employee_id"
     t.index ["log_date_id"], name: "index_logs_on_log_date_id"
   end
 

@@ -5,5 +5,6 @@ class Employee < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
    has_many :log_dates
+   has_many :logs, through: :log_dates
    has_many :projects
 end

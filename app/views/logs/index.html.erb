@@ -1,0 +1,12 @@
+<center>
+	<table>
+		<% @logs.group_by(&:log_date_id).each do |log_date_id, logs| %>
+			<tr><%= LogDat.find(log_date_id).date %></tr>
+			<% logs.each do |log| %>
+				<tr>
+					<td></td>
+				</tr>
+			<% end %>
+		<% end %>
+	</table>
+</center>
