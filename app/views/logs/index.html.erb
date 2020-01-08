@@ -1,12 +1,25 @@
-<center>
-	<table>
+<table border="1" style="width: 100%">
+		<tbody>
+			<th>ID</th>
+			<th>Commit/Detail</th>
+			<th>Branch Name</th>
+			<th>Commit</th>
+			<th>Time</th>
+			<th>Project</th>
+
+
 		<% @logs.group_by(&:log_date_id).each do |log_date_id, logs| %>
-			<tr><%= LogDat.find(log_date_id).date %></tr>
-			<% logs.each do |log| %>
+			<tr bgcolor="grey"><td colspan="6"><center><b><%= LogDate.find(log_date_id).date %></b></center></td></tr>
+			<% logs.each_with_index do |log, ind| %>
+
 				<tr>
-					<td></td>
+					<td><%= ind+1%></td>
+					<td><%= log.details_display%></td>
+					<td><%= log.branch_name %></td>
+					<td><%= link_to log.commit_hash.last(7), log.link %></td>
+					<td><%= log.time_taken %></td>
+					<td><%= log.project&.display_name %></td>
 				</tr>
 			<% end %>
 		<% end %>
-	</table>
-</center>
+</table>
